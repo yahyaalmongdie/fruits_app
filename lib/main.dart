@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/functions/on_geneate_routes.dart';
+import 'package:fruits_app/core/functions/on_generate_routes.dart';
 import 'package:fruits_app/features/splash/presentation/view/page/splash_view.dart';
 
 void main() {
@@ -14,7 +14,6 @@ class FruitHub extends StatelessWidget {
     return const MaterialApp(
       onGenerateRoute: onGenerateRoute,
       initialRoute: SplashView.splashView,
-      home: SplashView(),
     );
   }
 }
