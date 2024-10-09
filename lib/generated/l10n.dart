@@ -49,6 +49,86 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `تخط`
+  String get skip {
+    return Intl.message(
+      'تخط',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fruit`
+  String get fruit {
+    return Intl.message(
+      'Fruit',
+      name: 'fruit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `HUB`
+  String get HUB {
+    return Intl.message(
+      'HUB',
+      name: 'HUB',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مرحبًا بك في`
+  String get on_boarding_title1 {
+    return Intl.message(
+      'مرحبًا بك في',
+      name: 'on_boarding_title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.`
+  String get on_boarding_body1 {
+    return Intl.message(
+      'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
+      name: 'on_boarding_body1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابحث وتسوق`
+  String get on_boarding_title2 {
+    return Intl.message(
+      'ابحث وتسوق',
+      name: 'on_boarding_title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية`
+  String get on_boarding_body2 {
+    return Intl.message(
+      'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
+      name: 'on_boarding_body2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ الان`
+  String get get_started {
+    return Intl.message(
+      'ابدأ الان',
+      name: 'get_started',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +137,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
     ];
   }
 

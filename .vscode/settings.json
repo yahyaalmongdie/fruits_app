@@ -1,3 +1,6 @@
 {
-  "workbench.colorCustomizations": {}
+  "workbench.colorCustomizations": {},
+  "editor.formatOnPaste": true,
+      "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
 }
