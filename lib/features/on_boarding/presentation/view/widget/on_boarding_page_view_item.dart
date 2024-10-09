@@ -55,13 +55,12 @@ class OnBoardingPageViewItem extends StatelessWidget {
           height: 24,
         ),
         Padding(
-            padding: const EdgeInsets.symmetric(horizontal: (37.0)),
-            child: Text(
-              body,
-              textAlign: TextAlign.center,
-            ),
-            ),
-        
+          padding: const EdgeInsets.symmetric(horizontal: (37.0)),
+          child: Text(
+            body,
+            textAlign: TextAlign.center,
+          ),
+        ),
       ],
     );
   }
