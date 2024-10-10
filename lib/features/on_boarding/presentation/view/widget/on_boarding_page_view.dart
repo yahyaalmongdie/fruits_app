@@ -5,11 +5,13 @@ import 'package:fruits_app/generated/l10n.dart';
 import 'on_boarding_page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
-  const OnBoardingPageView({super.key});
+  const OnBoardingPageView({super.key, required this.pageController});
 
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         OnBoardingPageViewItem(
             title: Row(
