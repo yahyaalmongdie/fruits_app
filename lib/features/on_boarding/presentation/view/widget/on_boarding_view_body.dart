@@ -24,7 +24,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         currentPage = pageController.page!.round();
       });
     });
-
     super.initState();
   }
 
@@ -36,18 +35,26 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: OnBoardingPageView(pageController: pageController),
         ),
         DotsIndicator(
+   
           dotsCount: 2,
-          
           decorator: DotsDecorator(
-              activeColor: AppColors.primaryColor,
-              color: AppColors.primaryColor.withOpacity(.5)),
+            activeColor: currentPage ==1
+                ? AppColors.primaryColor
+                : AppColors.primaryColor.withOpacity(.5),
+          ),
         ),
         const SizedBox(
           height: 29,
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-          child: CustomButton(),
+        Visibility(
+          maintainAnimation: true,
+          maintainState: true,
+          maintainSize: true,
+          visible: currentPage == 1 ? true : false,
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+            child: CustomButton(),
+          ),
         ),
         const SizedBox(
           height: 43,

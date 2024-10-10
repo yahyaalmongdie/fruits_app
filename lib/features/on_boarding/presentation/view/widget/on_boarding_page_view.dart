@@ -14,7 +14,10 @@ class OnBoardingPageView extends StatelessWidget {
       controller: pageController,
       children: [
         OnBoardingPageViewItem(
-            showSkipWidget: pageController.page!.round() == 0 ? true : false,
+            showSkipWidget: (pageController.hasClients
+                    ? pageController.page!.round()
+                    : 0) ==
+                0,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -27,7 +30,10 @@ class OnBoardingPageView extends StatelessWidget {
             image: Assets.imagesPageViewItem1Image,
             backGroundImage: Assets.imagesPageViewItem1BackgroundImage),
         OnBoardingPageViewItem(
-            showSkipWidget: pageController.page!.round() == 0 ? true : false,
+            showSkipWidget: (pageController.hasClients
+                    ? pageController.page!.round()
+                    : 0) !=
+                0,
             title: Text(S.of(context).on_boarding_title2),
             body: S.of(context).on_boarding_body2,
             image: Assets.imagesPageViewItem2Image,
