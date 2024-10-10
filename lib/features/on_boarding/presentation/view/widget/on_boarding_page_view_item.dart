@@ -8,11 +8,13 @@ class OnBoardingPageViewItem extends StatelessWidget {
       required this.title,
       required this.body,
       required this.image,
-      required this.backGroundImage});
+      required this.backGroundImage,
+      required this.showSkipWidget});
 
   final String body;
   final String image, backGroundImage;
   final Widget title;
+  final bool showSkipWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +40,13 @@ class OnBoardingPageViewItem extends StatelessWidget {
                   image,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  S.of(context).skip,
+              Visibility(
+                visible: showSkipWidget,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    S.of(context).skip,
+                  ),
                 ),
               ),
             ],
