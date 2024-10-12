@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/utils/font_size_config.dart';
 
-abstract class TextStyles {
+abstract class AppTextStyles {
   static TextStyle bold13({required BuildContext context}) {
     return TextStyle(
       fontWeight: FontWeight.bold,
@@ -12,6 +12,7 @@ abstract class TextStyles {
   static TextStyle bold23({required BuildContext context}) {
     return TextStyle(
       fontWeight: FontWeight.bold,
+      color: const Color(0xff0c0d0d),
       fontSize: getResponsiveFontSize(context, fontSize: 23),
     );
   }
