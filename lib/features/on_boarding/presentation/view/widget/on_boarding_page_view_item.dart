@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
+import 'package:fruits_app/features/auth/presentation/view/login_view.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
 class OnBoardingPageViewItem extends StatelessWidget {
@@ -45,10 +46,16 @@ class OnBoardingPageViewItem extends StatelessWidget {
                 visible: showSkipWidget,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    S.of(context).skip,
-                    style: AppTextStyles.semiBold13(context: context)
-                        .copyWith(color: const Color(0xff4e5456)),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(LoginView.routeName);
+                    },
+                    child: Text(
+                      S.of(context).skip,
+                      style: AppTextStyles.semiBold13(context: context)
+                          .copyWith(color: const Color(0xff4e5456)),
+                    ),
                   ),
                 ),
               ),
