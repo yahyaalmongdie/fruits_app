@@ -28,6 +28,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   }
 
   @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -35,10 +41,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: OnBoardingPageView(pageController: pageController),
         ),
         DotsIndicator(
-   
           dotsCount: 2,
+          position: currentPage,
           decorator: DotsDecorator(
-            activeColor: currentPage ==1
+            activeColor: AppColors.primaryColor,
+            color: currentPage == 1
                 ? AppColors.primaryColor
                 : AppColors.primaryColor.withOpacity(.5),
           ),
