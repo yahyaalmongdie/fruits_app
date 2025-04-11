@@ -129,6 +129,16 @@ class S {
       args: [],
     );
   }
+
+  /// `تسجيل دخول`
+  String get login {
+    return Intl.message(
+      'تسجيل دخول',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
