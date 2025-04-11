@@ -139,6 +139,26 @@ class S {
       args: [],
     );
   }
+
+  /// `البريد الإلكتروني`
+  String get email {
+    return Intl.message(
+      'البريد الإلكتروني',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get password {
+    return Intl.message(
+      'كلمة المرور',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
