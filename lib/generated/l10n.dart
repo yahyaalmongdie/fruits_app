@@ -159,6 +159,36 @@ class S {
       args: [],
     );
   }
+
+  /// `نسيت كلمة المرور؟`
+  String get forget_password {
+    return Intl.message(
+      'نسيت كلمة المرور؟',
+      name: 'forget_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` ؟لاتمتلك حساب`
+  String get You_do_not_have_account {
+    return Intl.message(
+      ' ؟لاتمتلك حساب',
+      name: 'You_do_not_have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` قم بإنشاء حساب`
+  String get please_create_account {
+    return Intl.message(
+      ' قم بإنشاء حساب',
+      name: 'please_create_account',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

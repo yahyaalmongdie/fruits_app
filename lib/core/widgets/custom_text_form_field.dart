@@ -6,10 +6,10 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
       {super.key,
       required this.hintText,
-      this.suffix,
+      this.suffixIcon,
       required this.textInputType});
   final String hintText;
-  final Widget? suffix;
+  final Widget? suffixIcon;
   final TextInputType textInputType;
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CustomTextFormField extends StatelessWidget {
       child: TextFormField(
         keyboardType: textInputType,
         decoration: InputDecoration(
-            suffix: suffix,
+            suffixIcon: suffixIcon,
             hintText: hintText,
             hintStyle: AppTextStyles.bold13(context: context)
                 .copyWith(color: const Color(0xff949D9E)),
