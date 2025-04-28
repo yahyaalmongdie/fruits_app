@@ -189,6 +189,16 @@ class S {
       args: [],
     );
   }
+
+  /// `أو`
+  String get Or {
+    return Intl.message(
+      'أو',
+      name: 'Or',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
