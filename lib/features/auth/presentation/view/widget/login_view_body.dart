@@ -12,62 +12,65 @@ class LoginViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 24,
-          ),
-          CustomTextFormField(
-            textInputType: TextInputType.emailAddress,
-            hintText: S.of(context).email,
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          CustomTextFormField(
-            suffixIcon: const Icon(
-              Icons.remove_red_eye_outlined,
-              color: Color(0xffC9CECF),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 24,
             ),
-            textInputType: TextInputType.visiblePassword,
-            hintText: S.of(context).password,
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(S.of(context).forget_password,
-                  style: AppTextStyles.semiBold13(context: context)
-                      .copyWith(color: AppColors.lightPrimaryColor))
-            ],
-          ),
-          const SizedBox(
-            height: 33,
-          ),
-          CustomButton(
-            btnText: S.of(context).login,
-            onPressed: () {},
-          ),
-          const SizedBox(
-            height: 33,
-          ),
-          Text.rich(TextSpan(children: [
-            TextSpan(
-                text: S.of(context).You_do_not_have_account,
-                style: AppTextStyles.semiBold16(context: context)
-                    .copyWith(color: AppColors.primaryColor)),
-            TextSpan(
-                text: ' ',
-                style: AppTextStyles.semiBold16(context: context)
-                    .copyWith(color: const Color(0xff949D9E))),
-            TextSpan(
-                text: S.of(context).please_create_account,
-                style: AppTextStyles.semiBold16(context: context)
-                    .copyWith(color: const Color(0xff949D9E))),
-          ]))
-        ],
+            CustomTextFormField(
+              textInputType: TextInputType.emailAddress,
+              hintText: S.of(context).email,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            CustomTextFormField(
+              suffixIcon: const Icon(
+                Icons.remove_red_eye_outlined,
+                color: Color(0xffC9CECF),
+              ),
+              textInputType: TextInputType.visiblePassword,
+              hintText: S.of(context).password,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(S.of(context).forget_password,
+                    style: AppTextStyles.semiBold13(context: context)
+                        .copyWith(color: AppColors.lightPrimaryColor))
+              ],
+            ),
+            const SizedBox(
+              height: 33,
+            ),
+            CustomButton(
+              btnText: S.of(context).login,
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 33,
+            ),
+            Text.rich(TextSpan(children: [
+              TextSpan(
+                  text: S.of(context).You_do_not_have_account,
+                  style: AppTextStyles.semiBold16(context: context)
+                      .copyWith(color: AppColors.primaryColor)),
+              TextSpan(
+                  text: ' ',
+                  style: AppTextStyles.semiBold16(context: context)
+                      .copyWith(color: const Color(0xff949D9E))),
+              TextSpan(
+                  text: S.of(context).please_create_account,
+                  style: AppTextStyles.semiBold16(context: context)
+                      .copyWith(color: const Color(0xff949D9E))),
+            ]))
+          ],
+        ),
       ),
     );
   }
