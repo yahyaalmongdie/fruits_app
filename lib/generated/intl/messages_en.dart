@@ -32,6 +32,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fruit": MessageLookupByLibrary.simpleMessage("Fruit"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "login_by_apple":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
+        "login_by_facebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
+        "login_by_google":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "on_boarding_body1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "on_boarding_body2": MessageLookupByLibrary.simpleMessage(

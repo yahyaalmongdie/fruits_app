@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
+import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/or_divider.dart';
+import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -61,7 +63,31 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 33,
             ),
-            const OrDivider()
+            const OrDivider(),
+            const SizedBox(
+              height: 16,
+            ),
+            SocialLoginButton(
+              icon: Assets.imagesGoogleIcon,
+              title: S.of(context).login_by_google,
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            SocialLoginButton(
+              icon: Assets.imagesAppleIcon,
+              title: S.of(context).login_by_apple,
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            SocialLoginButton(
+              icon: Assets.imagesFacebookIcon,
+              title: S.of(context).login_by_facebook,
+              onPressed: () {},
+            ),
           ],
         ),
       ),

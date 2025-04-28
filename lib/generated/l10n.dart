@@ -199,6 +199,36 @@ class S {
       args: [],
     );
   }
+
+  /// `تسجيل بواسطة جوجل`
+  String get login_by_google {
+    return Intl.message(
+      'تسجيل بواسطة جوجل',
+      name: 'login_by_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل بواسطة أبل`
+  String get login_by_apple {
+    return Intl.message(
+      'تسجيل بواسطة أبل',
+      name: 'login_by_apple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل بواسطة فيسبوك`
+  String get login_by_facebook {
+    return Intl.message(
+      'تسجيل بواسطة فيسبوك',
+      name: 'login_by_facebook',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
