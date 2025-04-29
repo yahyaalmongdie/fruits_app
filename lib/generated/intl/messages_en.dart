@@ -26,10 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "Or": MessageLookupByLibrary.simpleMessage("أو"),
         "You_do_not_have_account":
             MessageLookupByLibrary.simpleMessage(" ؟لاتمتلك حساب"),
+        "create_new_account":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "forget_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "fruit": MessageLookupByLibrary.simpleMessage("Fruit"),
+        "full_name": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "login_by_apple":
@@ -38,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "login_by_google":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "on_boarding_body1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "on_boarding_body2": MessageLookupByLibrary.simpleMessage(
@@ -49,6 +53,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "please_create_account":
             MessageLookupByLibrary.simpleMessage(" قم بإنشاء حساب"),
-        "skip": MessageLookupByLibrary.simpleMessage("تخط")
+        "skip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "terms_and_coniditions_1": MessageLookupByLibrary.simpleMessage(
+            "من خلال إنشاء حساب ، فإنك توافق على "),
+        "terms_and_coniditions_2":
+            MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
+        "you_have_aleardy_account":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟")
       };
 }

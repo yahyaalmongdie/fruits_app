@@ -12,9 +12,14 @@
     "You_do_not_have_account":"لاتمتلك حساب",
     "please_create_account":" قم بإنشاء حساب",
     "login":"تسجيل دخول",
-    "Or":"أو",
     "Or": "أو",
     "login_by_google": "تسجيل بواسطة جوجل",
     "login_by_apple": "تسجيل بواسطة أبل",
-    "login_by_facebook": "تسجيل بواسطة فيسبوك"
+    "login_by_facebook": "تسجيل بواسطة فيسبوك",
+    "new_account":"حساب جديد",
+    "full_name":"الاسم كامل",
+    "terms_and_coniditions_1":"من خلال إنشاء حساب ، فإنك توافق على ",
+    "terms_and_coniditions_2":"الشروط والأحكام الخاصة بنا",
+    "create_new_account":"إنشاء حساب جديد",
+    "you_have_aleardy_account":"تمتلك حساب بالفعل؟"
 }

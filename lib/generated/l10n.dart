@@ -229,6 +229,66 @@ class S {
       args: [],
     );
   }
+
+  /// `حساب جديد`
+  String get new_account {
+    return Intl.message(
+      'حساب جديد',
+      name: 'new_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاسم كامل`
+  String get full_name {
+    return Intl.message(
+      'الاسم كامل',
+      name: 'full_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `من خلال إنشاء حساب ، فإنك توافق على `
+  String get terms_and_coniditions_1 {
+    return Intl.message(
+      'من خلال إنشاء حساب ، فإنك توافق على ',
+      name: 'terms_and_coniditions_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الشروط والأحكام الخاصة بنا`
+  String get terms_and_coniditions_2 {
+    return Intl.message(
+      'الشروط والأحكام الخاصة بنا',
+      name: 'terms_and_coniditions_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إنشاء حساب جديد`
+  String get create_new_account {
+    return Intl.message(
+      'إنشاء حساب جديد',
+      name: 'create_new_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تمتلك حساب بالفعل؟`
+  String get you_have_aleardy_account {
+    return Intl.message(
+      'تمتلك حساب بالفعل؟',
+      name: 'you_have_aleardy_account',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
