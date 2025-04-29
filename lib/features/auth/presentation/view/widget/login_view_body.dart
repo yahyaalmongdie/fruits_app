@@ -5,6 +5,7 @@ import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
+import 'package:fruits_app/features/auth/presentation/view/pages/signup_view.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/or_divider.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
@@ -60,7 +61,13 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 33,
             ),
-            const DonotHaveAccountWidget(),
+            DonotHaveAccountWidget(
+              onTap: () {
+                Navigator.pushNamed(context, SignupView.routeName);
+              },
+              title1: S.of(context).You_do_not_have_account,
+              title2: S.of(context).please_create_account,
+            ),
             const SizedBox(
               height: 33,
             ),

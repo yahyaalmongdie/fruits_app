@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/constants.dart';
+import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
+import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/terms_and_conditions.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
@@ -43,7 +45,22 @@ class SignupViewBody extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              const TermsAndConditions()
+              const TermsAndConditions(),
+                 const SizedBox(
+                height: 30,
+              ),
+               CustomButton(btnText: S.of(context).create_new_account,onPressed: (){},)
+            
+               ,const SizedBox(
+                height: 26,
+              ),
+                   DonotHaveAccountWidget(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                title1: S.of(context).you_have_aleardy_account,
+                title2: S.of(context).login,
+              ),
             ],
           ),
         ));
