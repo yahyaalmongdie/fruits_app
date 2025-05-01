@@ -46,15 +46,17 @@ class SignupViewBody extends StatelessWidget {
                 height: 16,
               ),
               const TermsAndConditions(),
-                 const SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-               CustomButton(btnText: S.of(context).create_new_account,onPressed: (){},)
-            
-               ,const SizedBox(
+              CustomButton(
+                btnText: S.of(context).create_new_account,
+                onPressed: () {},
+              ),
+              const SizedBox(
                 height: 26,
               ),
-                   DonotHaveAccountWidget(
+              DonotHaveAccountWidget(
                 onTap: () {
                   Navigator.pop(context);
                 },
