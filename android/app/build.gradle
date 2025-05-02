@@ -32,7 +32,7 @@ android {
     defaultConfig {
             compileSdkVersion 35
         applicationId "com.example.fruits_app"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
