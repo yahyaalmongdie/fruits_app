@@ -18,7 +18,7 @@ class SignupViewBody extends StatefulWidget {
 class _SignupViewBodyState extends State<SignupViewBody> {
   GlobalKey<FormState> formkey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-  String? name, email, password;
+  late String name, email, password;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -34,7 +34,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
-                    name = value;
+                    name = value!;
                   },
                   textInputType: TextInputType.name,
                   hintText: S.of(context).full_name,
@@ -44,7 +44,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
-                    email = value;
+                    email = value!;
                   },
                   textInputType: TextInputType.emailAddress,
                   hintText: S.of(context).email,
@@ -54,7 +54,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ),
                 CustomTextFormField(
                   onSaved: (value) {
-                    password = value;
+                    password = value!;
                   },
                   suffixIcon: const Icon(
                     Icons.remove_red_eye_outlined,
@@ -74,10 +74,11 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   btnText: S.of(context).create_new_account,
                   onPressed: () {
                     if (formkey.currentState!.validate()) {
+                      formkey.currentState!.save();
                       context
                           .read<SignupCubit>()
                           .createUserWithEmailAndPassword(
-                              email: email!, password: password!, name: name!);
+                              email: email, password: password, name: name);
                     } else {
                       setState(() {
                         autovalidateMode = AutovalidateMode.always;
