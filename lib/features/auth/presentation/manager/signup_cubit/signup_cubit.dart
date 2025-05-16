@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fruits_app/core/functions/check_current_local.dart';
 import 'package:fruits_app/features/auth/domain/entities/user_entity.dart';
 import 'package:fruits_app/features/auth/domain/repo/auth_repo.dart';
 
@@ -18,7 +19,8 @@ class SignupCubit extends Cubit<SignupState> {
         email: email, password: password, name: name);
 
     result.fold((failure) {
-      emit(SignupFailures(message: failure.message));
+      emit(SignupFailures(
+        message:checkCurrentLocal()==true? failure.messageAr:failure.messageEn));
     }, (userEntity) {
       emit(SignupSuccess(userEntity: userEntity));
     });

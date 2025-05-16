@@ -21,10 +21,14 @@ class AuthRepoImpl implements AuthRepo {
 
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
-      return Left(ServerFailure(message: e.toString()));
+      return Left(ServerFailure(
+        messageAr: e.toString(),
+        messageEn: e.toString()));
     } catch (e) {
       return Left(
-          ServerFailure(message: "An error occurred.Please try again later."));
+          ServerFailure(
+          messageAr: "حدث خطأ ما,  من فضلك حاول لاحقا",
+            messageEn: "An error occurred.Please try again later."));
     }
   }
 }
