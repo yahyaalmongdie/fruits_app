@@ -5,6 +5,7 @@ import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_app/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
+import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/terms_and_conditions.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
@@ -52,16 +53,10 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 const SizedBox(
                   height: 16,
                 ),
-                CustomTextFormField(
-                  onSaved: (value) {
+                 PasswordFiled(
+                   onSaved: (value) {
                     password = value!;
                   },
-                  suffixIcon: const Icon(
-                    Icons.remove_red_eye_outlined,
-                    color: Color(0xffC9CECF),
-                  ),
-                  textInputType: TextInputType.visiblePassword,
-                  hintText: S.of(context).password,
                 ),
                 const SizedBox(
                   height: 16,
@@ -102,3 +97,4 @@ class _SignupViewBodyState extends State<SignupViewBody> {
         ));
   }
 }
+

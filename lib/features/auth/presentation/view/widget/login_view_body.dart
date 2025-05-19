@@ -8,6 +8,7 @@ import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_app/features/auth/presentation/view/pages/signup_view.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/or_divider.dart';
+import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
@@ -32,13 +33,10 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            CustomTextFormField(
-              suffixIcon: const Icon(
-                Icons.remove_red_eye_outlined,
-                color: Color(0xffC9CECF),
-              ),
-              textInputType: TextInputType.visiblePassword,
-              hintText: S.of(context).password,
+            PasswordFiled(
+              onSaved: (value) {
+                // password = value!;
+              },
             ),
             const SizedBox(
               height: 16,
