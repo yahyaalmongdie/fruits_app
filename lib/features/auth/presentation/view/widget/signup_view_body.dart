@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_app/constants.dart';
+import 'package:fruits_app/core/functions/custom_scaffold_messenger.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_app/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
@@ -20,6 +21,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   GlobalKey<FormState> formkey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   late String name, email, password;
+  bool isTearmsAccepted = false;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -53,31 +56,39 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 const SizedBox(
                   height: 16,
                 ),
-                 PasswordFiled(
-                   onSaved: (value) {
+                PasswordFiled(
+                  onSaved: (value) {
                     password = value!;
                   },
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                const TermsAndConditions(),
+                TermsAndConditions(
+                  onChange: (value) {
+                    isTearmsAccepted = value;
+                  },
+                ),
                 const SizedBox(
                   height: 30,
                 ),
                 CustomButton(
                   btnText: S.of(context).create_new_account,
                   onPressed: () {
-                    if (formkey.currentState!.validate()) {
-                      formkey.currentState!.save();
-                      context
-                          .read<SignupCubit>()
-                          .createUserWithEmailAndPassword(
-                              email: email, password: password, name: name);
+                    if (isTearmsAccepted) {
+                      if (formkey.currentState!.validate()) {
+                        formkey.currentState!.save();
+                        context
+                            .read<SignupCubit>()
+                            .createUserWithEmailAndPassword(
+                                email: email, password: password, name: name);
+                      } else {
+                        setState(() {
+                          autovalidateMode = AutovalidateMode.always;
+                        });
+                      }
                     } else {
-                      setState(() {
-                        autovalidateMode = AutovalidateMode.always;
-                      });
+                      customScaffoldMessenger(context: context,message: "يجب عليك قبول الشروط والاحكام");
                     }
                   },
                 ),
@@ -97,4 +108,3 @@ class _SignupViewBodyState extends State<SignupViewBody> {
         ));
   }
 }
-

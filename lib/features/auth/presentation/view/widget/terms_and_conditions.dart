@@ -5,7 +5,9 @@ import 'package:fruits_app/features/auth/presentation/view/widget/custom_check_b
 import 'package:fruits_app/generated/l10n.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  const TermsAndConditions({super.key});
+  const TermsAndConditions({super.key, required this.onChange});
+
+  final ValueChanged<bool> onChange;
 
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
@@ -21,6 +23,7 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
         CustomCheckBox(
           onChecked: (value) {
             isTearmsAccepted = value;
+            widget.onChange(value);
             setState(() {});
           },
           isCheck: isTearmsAccepted,
