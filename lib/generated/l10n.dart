@@ -289,6 +289,15 @@ class S {
       args: [],
     );
   }
+/// "يجب عليك قبول الشروط والاحكام"
+  String get you_have_to_accept_terms_and_conidiations {
+    return Intl.message(
+    "يجب عليك قبول الشروط والاحكام",
+      name: 'you_have_to_accept_terms_and_conidiations',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -88,7 +88,11 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                         });
                       }
                     } else {
-                      customScaffoldMessenger(context: context,message: "يجب عليك قبول الشروط والاحكام");
+                      customScaffoldMessenger(
+                          context: context,
+                          message: S
+                              .of(context)
+                              .you_have_to_accept_terms_and_conidiations);
                     }
                   },
                 ),
