@@ -20,7 +20,8 @@ class SignupCubit extends Cubit<SignupState> {
 
     result.fold((failure) {
       emit(SignupFailures(
-        message:checkCurrentLocal()==true? failure.messageAr:failure.messageEn));
+        message:
+              isLocalArabic()==true? failure.messageAr:failure.messageEn));
     }, (userEntity) {
       emit(SignupSuccess(userEntity: userEntity));
     });

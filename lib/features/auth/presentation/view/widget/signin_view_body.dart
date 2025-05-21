@@ -12,8 +12,8 @@ import 'package:fruits_app/features/auth/presentation/view/widget/password_filed
 import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
 import 'package:fruits_app/generated/l10n.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SigninViewBody extends StatelessWidget {
+  const SigninViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
