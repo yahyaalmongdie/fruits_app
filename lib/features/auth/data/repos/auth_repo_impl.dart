@@ -32,4 +32,25 @@ class AuthRepoImpl implements AuthRepo {
           messageEn: "An error occurred.Please try again later."));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signinWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      var user = await firebaseAuthServices.signinWithEmailAndPAssword(
+          email: email, password: password);
+
+      return Right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return Left(
+          ServerFailure(messageAr: e.toString(), messageEn: e.toString()));
+    } catch (e) {
+      log("Exception in AuthRepoImpl.signinWithEmailAndPAssword ${e.toString()} ");
+      return Left(ServerFailure(
+          messageAr: "حدث خطأ ما,  من فضلك حاول لاحقا",
+          messageEn: "An error occurred.Please try again later."));
+    }
+  }
 }
