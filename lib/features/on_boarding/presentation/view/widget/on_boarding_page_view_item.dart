@@ -52,7 +52,7 @@ class OnBoardingPageViewItem extends StatelessWidget {
                     onTap: () {
                       Prefs.setBool(kIsOnBoardingViewSeen, true);
                       Navigator.of(context)
-                          .pushReplacementNamed(LoginView.routeName);
+                          .pushReplacementNamed( SigninView.routeName);
                     },
                     child: Text(
                       S.of(context).skip,
