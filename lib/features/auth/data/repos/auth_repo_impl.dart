@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:fruits_app/core/error/custom_exception.dart';
 import 'package:fruits_app/core/error/failure.dart';
@@ -21,14 +23,13 @@ class AuthRepoImpl implements AuthRepo {
 
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
-      return Left(ServerFailure(
-        messageAr: e.toString(),
-        messageEn: e.toString()));
-    } catch (e) {
       return Left(
-          ServerFailure(
+          ServerFailure(messageAr: e.toString(), messageEn: e.toString()));
+    } catch (e) {
+      log("Exception in AuthRepoImpl.createUserWithEmailAndPassword ${e.toString()} ");
+      return Left(ServerFailure(
           messageAr: "حدث خطأ ما,  من فضلك حاول لاحقا",
-            messageEn: "An error occurred.Please try again later."));
+          messageEn: "An error occurred.Please try again later."));
     }
   }
 }
