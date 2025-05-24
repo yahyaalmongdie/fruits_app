@@ -17,9 +17,8 @@ class SigninCubit extends Cubit<SigninState> {
         email: email, password: password);
     result.fold((failure) {
       emit(SigninFailures(
-          message: isLocalArabic() == true
-              ? failure.messageAr
-              : failure.messageEn));
+          message:
+              isLocalArabic() == true ? failure.messageAr : failure.messageEn));
     }, (userEntity) {
       emit(SigninSuccess(userEntity: userEntity));
     });
@@ -30,9 +29,20 @@ class SigninCubit extends Cubit<SigninState> {
     var result = await authRepo.signinWithGoogle();
     result.fold((failure) {
       emit(SigninFailures(
-          message: isLocalArabic() == true
-              ? failure.messageAr
-              : failure.messageEn));
+          message:
+              isLocalArabic() == true ? failure.messageAr : failure.messageEn));
+    }, (userEntity) {
+      emit(SigninSuccess(userEntity: userEntity));
+    });
+  }
+
+  Future<void> signinWithFacebook() async {
+    emit(SigninLoading());
+    var result = await authRepo.signinWithFacebook();
+    result.fold((failure) {
+      emit(SigninFailures(
+          message:
+              isLocalArabic() == true ? failure.messageAr : failure.messageEn));
     }, (userEntity) {
       emit(SigninSuccess(userEntity: userEntity));
     });
