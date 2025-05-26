@@ -67,7 +67,13 @@ class FirebaseAuthServices {
         throw CustomException(
             messageAr: "البريد الالكتروني او كلمة المرور غير صحيح",
             messageEn: "The password provided is too weak.");
-      } else if (e.code == 'network-request-failed') {
+      } 
+       else if (e.code == 'invalid-credential') {
+        throw CustomException(
+            messageAr: "البريد الالكتروني او كلمة المرور غير صحيح",
+            messageEn: "The password provided is too weak.");
+      }
+      else if (e.code == 'network-request-failed') {
         throw CustomException(
             messageAr: "تأكد من اتصالك بالانترنت",
             messageEn: "be sure you are online");
