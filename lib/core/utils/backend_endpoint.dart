@@ -1,3 +1,3 @@
 class BackendEndpoint {
-  static const String addUserData = "user";
+  static const String addUserData = "users";
 }
