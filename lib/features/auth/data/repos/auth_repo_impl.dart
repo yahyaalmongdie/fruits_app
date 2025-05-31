@@ -54,7 +54,8 @@ class AuthRepoImpl implements AuthRepo {
       var user = await firebaseAuthServices.signinWithEmailAndPAssword(
           email: email, password: password);
 
-      return Right(UserModel.fromFirebaseUser(user));
+      var userEntity = await getUserData(uId: user.uid);
+      return Right(userEntity);
     } on CustomException catch (e) {
       return Left(
           ServerFailure(messageAr: e.toString(), messageEn: e.toString()));
@@ -136,5 +137,12 @@ class AuthRepoImpl implements AuthRepo {
     if (user != null) {
       await firebaseAuthServices.deleteUser();
     }
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String uId}) async {
+    var data = await databaseService.getData(
+        path: BackendEndpoint.getUserData, docId: uId);
+    return UserModel.fromJson(data);
   }
 }
