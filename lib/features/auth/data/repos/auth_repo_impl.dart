@@ -130,7 +130,7 @@ class AuthRepoImpl implements AuthRepo {
   @override
   Future addUserData({required UserEntity user}) async {
     return await databaseService.addData(
-        path: BackendEndpoint.addUserData, data: user.tomap());
+        docId: user.uId, path: BackendEndpoint.addUserData, data: user.tomap());
   }
 
   Future<void> deleteUser(User? user) async {
