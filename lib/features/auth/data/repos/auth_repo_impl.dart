@@ -73,7 +73,14 @@ class AuthRepoImpl implements AuthRepo {
     try {
       user = await firebaseAuthServices.signInWithGoogle();
       var userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+
+      var checkUserIsExist = await databaseService.checkIfDataExist(
+          path: BackendEndpoint.checkIfUserExist, docId: user.uid);
+      if (!checkUserIsExist) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
 
       return Right(userEntity);
     } catch (e) {
@@ -94,7 +101,14 @@ class AuthRepoImpl implements AuthRepo {
       user = await firebaseAuthServices.signInWithFacebook();
 
       var userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+
+      var checkUserIsExist = await databaseService.checkIfDataExist(
+          path: BackendEndpoint.checkIfUserExist, docId: user.uid);
+      if (!checkUserIsExist) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
 
       return Right(userEntity);
     } catch (e) {
@@ -114,7 +128,14 @@ class AuthRepoImpl implements AuthRepo {
     try {
       user = await firebaseAuthServices.signInWithApple();
       var userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+
+      var checkUserIsExist = await databaseService.checkIfDataExist(
+          path: BackendEndpoint.checkIfUserExist, docId: user.uid);
+      if (!checkUserIsExist) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
       return Right(userEntity);
     } catch (e) {
       await deleteUser(user);

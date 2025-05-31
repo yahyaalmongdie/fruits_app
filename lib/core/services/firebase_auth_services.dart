@@ -67,13 +67,11 @@ class FirebaseAuthServices {
         throw CustomException(
             messageAr: "البريد الالكتروني او كلمة المرور غير صحيح",
             messageEn: "The password provided is too weak.");
-      } 
-       else if (e.code == 'invalid-credential') {
+      } else if (e.code == 'invalid-credential') {
         throw CustomException(
             messageAr: "البريد الالكتروني او كلمة المرور غير صحيح",
             messageEn: "The password provided is too weak.");
-      }
-      else if (e.code == 'network-request-failed') {
+      } else if (e.code == 'network-request-failed') {
         throw CustomException(
             messageAr: "تأكد من اتصالك بالانترنت",
             messageEn: "be sure you are online");
@@ -132,7 +130,6 @@ class FirebaseAuthServices {
   }
 
   Future<User> signInWithApple() async {
-
     final rawNonce = generateNonce();
     final nonce = sha256ofString(rawNonce);
 
@@ -150,14 +147,12 @@ class FirebaseAuthServices {
       idToken: appleCredential.identityToken,
       rawNonce: rawNonce,
     );
- 
-    return (await FirebaseAuth.instance.signInWithCredential(oauthCredential)).user!;
+
+    return (await FirebaseAuth.instance.signInWithCredential(oauthCredential))
+        .user!;
   }
 
-  Future deleteUser() async{
-
+  Future deleteUser() async {
     await FirebaseAuth.instance.currentUser!.delete();
-
   }
-  
-  }
+}
