@@ -4,6 +4,8 @@ import 'package:fruits_app/features/auth/presentation/view/pages/signup_view.dar
 import 'package:fruits_app/features/on_boarding/presentation/view/page/on_boarding_view.dart';
 import 'package:fruits_app/features/splash/presentation/view/page/splash_view.dart';
 
+import '../../features/home/presentation/view/pages/home_view.dart';
+
 Route<dynamic>? onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.splashView:
@@ -12,6 +14,8 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const OnBoardingView());
     case SigninView.routeName:
       return MaterialPageRoute(builder: (context) => const SigninView());
+    case HomeView.routeName:
+      return MaterialPageRoute(builder: (context) => const HomeView());
     case SignupView.routeName:
       return MaterialPageRoute(builder: (context) => const SignupView());
     default:
