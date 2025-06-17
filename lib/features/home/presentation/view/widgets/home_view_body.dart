@@ -7,7 +7,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
-      slivers: [CustomHomeAppBar()],
+      slivers: [SliverToBoxAdapter(child: CustomHomeAppBar())],
     );
   }
 }
