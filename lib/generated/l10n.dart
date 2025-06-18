@@ -140,6 +140,16 @@ class S {
     );
   }
 
+  /// ` ابحث عن.......`
+  String get looking_for {
+    return Intl.message(
+      ' ابحث عن.......',
+      name: 'looking_for',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `البريد الإلكتروني`
   String get email {
     return Intl.message(
@@ -289,10 +299,11 @@ class S {
       args: [],
     );
   }
-/// "يجب عليك قبول الشروط والاحكام"
+
+  /// "يجب عليك قبول الشروط والاحكام"
   String get you_have_to_accept_terms_and_conidiations {
     return Intl.message(
-    "يجب عليك قبول الشروط والاحكام",
+      "يجب عليك قبول الشروط والاحكام",
       name: 'you_have_to_accept_terms_and_conidiations',
       desc: '',
       args: [],
