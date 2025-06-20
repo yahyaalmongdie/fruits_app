@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/constants.dart';
+import 'package:fruits_app/core/widgets/fruit_item.dart';
 import 'package:fruits_app/core/widgets/search_text_filed.dart';
 import 'package:fruits_app/features/home/presentation/view/widgets/best_selling_header.dart';
 import 'package:fruits_app/features/home/presentation/view/widgets/custom_home_app_bar.dart';
@@ -32,7 +33,11 @@ class HomeViewBody extends StatelessWidget {
                 SizedBox(
                   height: 12,
                 ),
-                BestSellingHeader()
+                BestSellingHeader(),
+                SizedBox(
+                  height: 8,
+                ),
+                FruitItem(),
               ],
             ),
           ),

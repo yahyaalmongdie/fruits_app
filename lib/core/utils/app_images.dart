@@ -71,7 +71,7 @@ class Assets {
   static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
 
   /// Assets for imagesWatermelonTest
-  /// assets/images/watermelon_test.svg
-  static const String imagesWatermelonTest = "assets/images/watermelon_test.svg";
+  /// assets/images/watermelon_test.png
+  static const String imagesWatermelonTest = "assets/images/watermelon_test.png";
 }
 
