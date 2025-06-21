@@ -30,6 +30,38 @@ class Assets {
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
 
+  /// Assets for imagesHomeIconsBoldHome
+  /// assets/images/home_icons/bold/home.svg
+  static const String imagesHomeIconsBoldHome = "assets/images/home_icons/bold/home.svg";
+
+  /// Assets for imagesHomeIconsBoldProducts
+  /// assets/images/home_icons/bold/products.svg
+  static const String imagesHomeIconsBoldProducts = "assets/images/home_icons/bold/products.svg";
+
+  /// Assets for imagesHomeIconsBoldShoppingCart
+  /// assets/images/home_icons/bold/shopping-cart.svg
+  static const String imagesHomeIconsBoldShoppingCart = "assets/images/home_icons/bold/shopping-cart.svg";
+
+  /// Assets for imagesHomeIconsBoldUser
+  /// assets/images/home_icons/bold/user.svg
+  static const String imagesHomeIconsBoldUser = "assets/images/home_icons/bold/user.svg";
+
+  /// Assets for imagesHomeIconsOutlineHome
+  /// assets/images/home_icons/outline/home.svg
+  static const String imagesHomeIconsOutlineHome = "assets/images/home_icons/outline/home.svg";
+
+  /// Assets for imagesHomeIconsOutlineProducts
+  /// assets/images/home_icons/outline/products.svg
+  static const String imagesHomeIconsOutlineProducts = "assets/images/home_icons/outline/products.svg";
+
+  /// Assets for imagesHomeIconsOutlineShoppingCart
+  /// assets/images/home_icons/outline/shopping-cart.svg
+  static const String imagesHomeIconsOutlineShoppingCart = "assets/images/home_icons/outline/shopping-cart.svg";
+
+  /// Assets for imagesHomeIconsOutlineUser
+  /// assets/images/home_icons/outline/user.svg
+  static const String imagesHomeIconsOutlineUser = "assets/images/home_icons/outline/user.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
