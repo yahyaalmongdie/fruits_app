@@ -24,8 +24,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 offset: Offset(0, -2),
                 spreadRadius: 0)
           ]),
-      child: const InActiveItem(
-        image: Assets.imagesHomeIconsOutlineHome,
+      child: const NavigationBarItem(
+        isSelected: true,
       ),
     );
   }
@@ -38,5 +38,26 @@ class InActiveItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(image);
+  }
+}
+
+class ActiveItem extends StatelessWidget {
+  const ActiveItem({super.key, required this.image});
+
+  final String image;
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(image);
+  }
+}
+
+class NavigationBarItem extends StatelessWidget {
+  const NavigationBarItem({super.key, required this.isSelected});
+  final bool isSelected;
+  @override
+  Widget build(BuildContext context) {
+    return isSelected
+        ? const ActiveItem(image: Assets.imagesHomeIconsBoldHome)
+        : const InActiveItem(image: Assets.imagesHomeIconsOutlineHome);
   }
 }
