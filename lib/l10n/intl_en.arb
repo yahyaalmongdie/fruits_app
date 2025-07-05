@@ -1,7 +1,7 @@
 {
     "skip": "تخط",
     "fruit": "Fruit",
-    "HUB": "HUB",
+    "hUB": "HUB",
     "on_boarding_title1": "مرحبًا بك في",
     "on_boarding_body1": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     "on_boarding_title2": "ابحث وتسوق",
@@ -11,9 +11,9 @@
     "email": "البريد الإلكتروني",
     "password": "كلمة المرور",
     "forget_password": "نسيت كلمة المرور؟",
-    "You_do_not_have_account": " ؟لاتمتلك حساب",
+    "you_do_not_have_account": " ؟لاتمتلك حساب",
     "please_create_account": " قم بإنشاء حساب",
-    "Or": "أو",
+    "or": "أو",
     "login_by_google":"تسجيل بواسطة جوجل",
     "login_by_apple":"تسجيل بواسطة أبل",
     "login_by_facebook":"تسجيل بواسطة فيسبوك",
@@ -24,5 +24,9 @@
     "create_new_account": "إنشاء حساب جديد",
     "you_have_aleardy_account": "تمتلك حساب بالفعل؟",
     "you_have_to_accept_terms_and_conidiations":"يجب عليك قبول الشروط والاحكام",
-    "looking_for": "ابحث عن......."
+    "looking_for": "ابحث عن.......",
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "shopping_cart": "سلة التسوق",
+    "my_account": "حسابي"
 }

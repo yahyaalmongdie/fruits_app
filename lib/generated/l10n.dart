@@ -309,6 +309,8 @@ class S {
       args: [],
     );
   }
+
+  
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
