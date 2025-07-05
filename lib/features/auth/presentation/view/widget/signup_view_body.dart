@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/constants.dart';
 import 'package:fruits_app/core/functions/custom_scaffold_messenger.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
@@ -8,7 +9,6 @@ import 'package:fruits_app/features/auth/presentation/manager/signup_cubit/signu
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/terms_and_conditions.dart';
-import 'package:fruits_app/generated/l10n.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
@@ -42,7 +42,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                     name = value!;
                   },
                   textInputType: TextInputType.name,
-                  hintText: S.of(context).full_name,
+                  hintText: S.of(context)!.full_name,
                 ),
                 const SizedBox(
                   height: 16,
@@ -52,7 +52,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                     email = value!;
                   },
                   textInputType: TextInputType.emailAddress,
-                  hintText: S.of(context).email,
+                  hintText: S.of(context)!.email,
                 ),
                 const SizedBox(
                   height: 16,
@@ -74,7 +74,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   height: 30,
                 ),
                 CustomButton(
-                  btnText: S.of(context).create_new_account,
+                  btnText: S.of(context)!.create_new_account,
                   onPressed: () {
                     if (isTearmsAccepted) {
                       if (formkey.currentState!.validate()) {
@@ -92,7 +92,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                       customScaffoldMessenger(
                           context: context,
                           message: S
-                              .of(context)
+                              .of(context)!
                               .you_have_to_accept_terms_and_conidiations);
                     }
                   },
@@ -104,8 +104,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  title1: S.of(context).you_have_aleardy_account,
-                  title2: S.of(context).login,
+                  title1: S.of(context)!.you_have_aleardy_account,
+                  title2: S.of(context)!.login,
                 ),
               ],
             ),

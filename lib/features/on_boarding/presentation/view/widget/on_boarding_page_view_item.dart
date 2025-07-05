@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/constants.dart';
 import 'package:fruits_app/core/services/shared_preferences_singlton.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
 import 'package:fruits_app/features/auth/presentation/view/pages/signin_view.dart';
-import 'package:fruits_app/generated/l10n.dart';
 
 class OnBoardingPageViewItem extends StatelessWidget {
   const OnBoardingPageViewItem(
@@ -52,10 +52,10 @@ class OnBoardingPageViewItem extends StatelessWidget {
                     onTap: () {
                       Prefs.setBool(kIsOnBoardingViewSeen, true);
                       Navigator.of(context)
-                          .pushReplacementNamed( SigninView.routeName);
+                          .pushReplacementNamed(SigninView.routeName);
                     },
                     child: Text(
-                      S.of(context).skip,
+                      S.of(context)!.skip,
                       style: AppTextStyles.semiBold13(context: context)
                           .copyWith(color: const Color(0xff4e5456)),
                     ),

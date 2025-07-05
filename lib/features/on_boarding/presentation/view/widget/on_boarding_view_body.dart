@@ -6,7 +6,7 @@ import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
 import 'package:fruits_app/features/auth/presentation/view/pages/signin_view.dart';
 import 'package:fruits_app/features/on_boarding/presentation/view/widget/on_boarding_page_view.dart';
-import 'package:fruits_app/generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -64,7 +64,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
             child: CustomButton(
-              btnText: S.of(context).get_started,
+              btnText: S.of(context)!.get_started,
               onPressed: () {
                 Prefs.setBool(kIsOnBoardingViewSeen, true);
 

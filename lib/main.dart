@@ -9,7 +9,7 @@ import 'package:fruits_app/core/services/shared_preferences_singlton.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/features/splash/presentation/view/page/splash_view.dart';
 import 'package:fruits_app/firebase_options.dart';
-import 'generated/l10n.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +38,7 @@ class FruitHub extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: S.delegate.supportedLocales,
+      supportedLocales: S.supportedLocales,
       locale: const Locale("ar"),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,

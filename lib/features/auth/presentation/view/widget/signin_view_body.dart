@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/constants.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
@@ -14,7 +15,6 @@ import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_acc
 import 'package:fruits_app/features/auth/presentation/view/widget/or_divider.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
-import 'package:fruits_app/generated/l10n.dart';
 
 class SigninViewBody extends StatefulWidget {
   const SigninViewBody({super.key});
@@ -46,7 +46,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                   email = value!;
                 },
                 textInputType: TextInputType.emailAddress,
-                hintText: S.of(context).email,
+                hintText: S.of(context)!.email,
               ),
               const SizedBox(
                 height: 16,
@@ -62,7 +62,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(S.of(context).forget_password,
+                  Text(S.of(context)!.forget_password,
                       style: AppTextStyles.semiBold13(context: context)
                           .copyWith(color: AppColors.lightPrimaryColor))
                 ],
@@ -71,7 +71,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 height: 33,
               ),
               CustomButton(
-                btnText: S.of(context).login,
+                btnText: S.of(context)!.login,
                 onPressed: () {
                   if (formkey.currentState!.validate()) {
                     formkey.currentState!.save();
@@ -87,8 +87,8 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 onTap: () {
                   Navigator.pushNamed(context, SignupView.routeName);
                 },
-                title1: S.of(context).You_do_not_have_account,
-                title2: S.of(context).please_create_account,
+                title1: S.of(context)!.you_do_not_have_account,
+                title2: S.of(context)!.please_create_account,
               ),
               const SizedBox(
                 height: 33,
@@ -99,7 +99,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               ),
               SocialLoginButton(
                 icon: Assets.imagesGoogleIcon,
-                title: S.of(context).login_by_google,
+                title: S.of(context)!.login_by_google,
                 onPressed: () {
                   context.read<SigninCubit>().signinWithGoogle();
                 },
@@ -112,7 +112,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                   children: [
                     SocialLoginButton(
                       icon: Assets.imagesAppleIcon,
-                      title: S.of(context).login_by_apple,
+                      title: S.of(context)!.login_by_apple,
                       onPressed: () {
                         context.read<SigninCubit>().signinWithApple();
                       },
@@ -124,7 +124,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 ),
               SocialLoginButton(
                 icon: Assets.imagesFacebookIcon,
-                title: S.of(context).login_by_facebook,
+                title: S.of(context)!.login_by_facebook,
                 onPressed: () {
                   context.read<SigninCubit>().signinWithFacebook();
                 },

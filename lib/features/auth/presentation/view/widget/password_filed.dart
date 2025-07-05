@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
-import 'package:fruits_app/generated/l10n.dart';
 
 class PasswordFiled extends StatefulWidget {
   const PasswordFiled({
@@ -37,7 +37,7 @@ class _PasswordFiledState extends State<PasswordFiled> {
               ),
       ),
       textInputType: TextInputType.visiblePassword,
-      hintText: S.of(context).password,
+      hintText: S.of(context)!.password,
     );
   }
 }
