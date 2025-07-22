@@ -3,9 +3,16 @@ import 'package:fruits_app/features/home/domain/entites/bottom_navigation_bar_en
 import 'package:fruits_app/features/home/presentation/view/widgets/Navigation_bar_item.dart'
     show NavigationBarItem;
 
-class CustomBottomNavigationBar extends StatelessWidget {
+class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
 
+  @override
+  State<CustomBottomNavigationBar> createState() =>
+      _CustomBottomNavigationBarState();
+}
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  int seletedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,10 +33,13 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 spreadRadius: 0)
           ]),
       child: Row(
-        children: bottomNavigationBarItems(context: context).map((e) {
+        children:
+            bottomNavigationBarItems(context: context).asMap().entries.map((e) {
+          var index = e.key;
+          var entity = e.value;
           return NavigationBarItem(
-            isSelected: false,
-            bottomNavigationBarEntity: e,
+            isSelected: seletedIndex==index,
+            bottomNavigationBarEntity: entity,
           );
         }).toList(),
       ),
