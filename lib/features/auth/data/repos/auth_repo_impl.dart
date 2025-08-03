@@ -58,6 +58,7 @@ class AuthRepoImpl implements AuthRepo {
           email: email, password: password);
 
       var userEntity = await getUserData(uId: user.uid);
+      await saveUserData(user: userEntity);
       return Right(userEntity);
     } on CustomException catch (e) {
       return Left(
