@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class BottomNavigationBarEntity {
   final String inActiveImage, activeImage;
@@ -12,7 +12,8 @@ class BottomNavigationBarEntity {
       required this.name});
 }
 
-List<BottomNavigationBarEntity> bottomNavigationBarItems({required BuildContext context}) {
+List<BottomNavigationBarEntity> bottomNavigationBarItems(
+    {required BuildContext context}) {
   return [
     BottomNavigationBarEntity(
         activeImage: Assets.imagesHomeIconsBoldHome,

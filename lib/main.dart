@@ -9,7 +9,7 @@ import 'package:fruits_app/core/services/shared_preferences_singlton.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/features/splash/presentation/view/page/splash_view.dart';
 import 'package:fruits_app/firebase_options.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

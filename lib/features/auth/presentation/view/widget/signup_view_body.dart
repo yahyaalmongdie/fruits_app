@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/constants.dart';
 import 'package:fruits_app/core/functions/custom_scaffold_messenger.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
@@ -9,6 +8,7 @@ import 'package:fruits_app/features/auth/presentation/manager/signup_cubit/signu
 import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_account_widget.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/terms_and_conditions.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});

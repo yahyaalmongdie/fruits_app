@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/constants.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
@@ -15,6 +14,7 @@ import 'package:fruits_app/features/auth/presentation/view/widget/donot_have_acc
 import 'package:fruits_app/features/auth/presentation/view/widget/or_divider.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/password_filed.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/social_login_button.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class SigninViewBody extends StatefulWidget {
   const SigninViewBody({super.key});

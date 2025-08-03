@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
 import 'package:fruits_app/features/auth/presentation/view/widget/custom_check_box.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({super.key, required this.onChange});

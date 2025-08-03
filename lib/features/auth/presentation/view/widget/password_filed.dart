@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:fruits_app/core/widgets/custom_text_form_field.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class PasswordFiled extends StatefulWidget {
   const PasswordFiled({

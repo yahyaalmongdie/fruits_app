@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/s.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/core/utils/app_images.dart';
 import 'package:fruits_app/core/utils/app_text_styles.dart';
+import 'package:fruits_app/l10n/s.dart' show S;
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
